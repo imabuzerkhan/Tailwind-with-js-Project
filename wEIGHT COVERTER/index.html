@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout in tailwind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-pink-100 flex items-center justify-center min-h-[100vh]">
+   <div class="bg-white text-black max-w-[400px] pb-6 ">
+    <h1 class="bg-red-600 text-white p-4">Weight converter</h1>
+    <p class="px-6 my-3 capitalize" >Enter you weight</p>
+    <input type="number" class=" py-2 border-[2px] border-[black] mx-6  text-center" id="inputfield">
+    <p class="px-6 my-3 capitalize" id="message"></p>
+    <h3  class="px-6 my-3 capitalize">Your Weight is showing in pound</h3>
+    <p id="outputfield" class="text-center my-2"></p>
+    <button id="btn" class="bg-red-400 text-black py-2 px-5 mx-5">Submit</button>
+
+
+   </div>
+   <script>
+    let input = document.getElementById("inputfield")
+    let ouput = document.getElementById("outputfield")
+    let button = document.getElementById("btn");
+    let message = document.getElementById("message");
+
+    button.addEventListener('click',()=>{
+        let val = input.value.trim()
+ 
+
+        if(val == ""){
+            message.innerHTML = "Please enter the weight First!"
+            ouput.innerHTML = " "
+
+
+        
+        }
+        else{
+            let out = val*2.2
+        ouput.innerHTML = out.toFixed(2)
+        message.innerHTML = " "
+        }
+       
+      
+    })
+
+   </script>
+</body>
+</html>

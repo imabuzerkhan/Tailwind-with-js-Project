@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>netflix clone-Tailwind css</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="w-[100%] h-[100vh] 
+  bg-[url('img/bg.jpg')] sm:bg-center sm:bg-cover ">
+    <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.5)]">
+      <header class="max-w-[1170px] mx-auto">
+        <div class="grid  sm:grid-cols-2  grid-cols-[30%_auto] items-center px-[10px]">
+          <figure>
+            <img src="img/logo-Photoroom.png-Photoroom.png" class="w-[140px]" alt="">
+          </figure>
+          <div class="flex justify-end gap-3">
+            <div class="relative">
+
+              <select name="" id=""
+                class="bg-black border-[1px] text-white boder-[white] sm:p-[5px_25px] p-[5px_20px] rounded-md">
+                <option value="">English</option>
+                <option value="">Nepali</option>
+              </select>
+            </div>
+            <button class="bg-red-600 px-3 text-white">Sing in </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-[1170px] mx-auto sm:pt-[150px] pt-[120px] text-center">
+        <h1 class="sm:text-[50px] text-[30px] text-white font-black font-serif">Unlimited movies, TV shows, and more
+        </h1>
+        <h4 class="text-white font-serif text-[25px] py-[15px] ">Watch anywhere. Cancel anytime.</h4>
+        <p class="text-white font-serif text-[22px] px-2 ">Ready to watch? Enter your email to create or restart your
+          membership.</p>
+        <div class="max-w-[700px] sm:px-[15px] px-[40px] mx-auto mt-5 ">
+          <form action="" class="grid sm:grid-cols-[70%_auto] grid-cols-1 gap-[20px]">
+            <input type="text " placeholder="Enter your email"
+              class=" text-white border-2 border-gray-200 h-[50px] bg-transparent pl-[20px] ">
+            <button class="bg-red-700 text-white sm:py-2 py-5 rounded-md  ">Get Started</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout in tailwind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- equal grid layout -->
+    <div class=" grid gap-4 m-5 md:grid-cols-3" >
+        <div class=" rounded bg-red-400 min-h-[100px] text-white p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eos?</div>
+        <div class=" rounded bg-gray-600 min-h-[100px] text-white p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorum, maiores deserunt iusto dolor sit corporis ex quae consequuntur sapiente.</div>
+        <div class=" rounded bg-gray-600 min-h-[100px] text-white p-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur corporis, fugiat voluptatibus repudiandae odio fugit! Officia velit magnam alias dolor dolores.</div>
+    </div>
+
+    <!-- unequal layout -->
+    <h1 class="text-center font-bold"> unequal layout </h1>
+    <div class=" grid gap-4 m-5 md:grid-cols-12 " >
+        <div class=" rounded bg-red-400 min-h-[100px] col-span-4 hidden md:block p-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, est vel! Fugiat molestias facere totam qui quam eum, beatae animi!</div>
+        <div class=" rounded bg-gray-600 min-h-[100px] col-span-12 md:col-span-3 p-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam soluta voluptatibus quod unde beatae, asperiores facilis laboriosam. Vitae voluptatum libero eum odit excepturi, maiores incidunt praesentium accusantium ex ducimus temporibus nobis tempora quaerat placeat aliquid rerum hic maxime dicta, optio, consequuntur at quisquam? Repellat magni nostrum corporis id ratione.</div>
+        <div class=" rounded bg-gray-600 min-h-[100px] col-span-5 hidden md:block row-span-5 p-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim quasi molestiae fuga placeat, laudantium, eaque mollitia id voluptate dolorem illum. Alias hic ipsam inventore placeat sit commodi laudantium corrupti. Adipisci, illum nemo cum corporis mollitia id vero culpa ab, sint, possimus aliquam similique ipsam? Voluptatum a numquam porro aperiam, nisi, quod doloremque, minus minima alias dicta blanditiis maiores dolor! Dolorum sunt totam, minima ex iste impedit ut delectus voluptates?</div>
+    </div>
+   
+</body>
+</html>

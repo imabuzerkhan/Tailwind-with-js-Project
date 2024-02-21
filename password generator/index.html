@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password strength checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-pink-200 min-h-screen flex items-center justify-center">
+    <div>
+        <input type="password" class="h-10 border-2 border-black px-2" id="password" placeholder="Enter Password">
+        <p class="text-black" id="message"></p>
+        <button class="bg-white rounded-md text-black py-1 px-2 mt-2" id="button">Submit</button>
+    </div>
+
+    <script>
+        const password = document.getElementById('password');
+        const message = document.getElementById('message');
+        const button = document.getElementById('button');
+
+        button.addEventListener('click', function(e) {
+    let passwordenter = password.value.trim(); // Trim removes leading and trailing whitespace
+    if (passwordenter === '') {
+        message.innerText = 'Password field cannot be empty';
+    } else if (passwordenter.length < 9) {
+        message.innerText = 'Password is too short';
+    } else {
+        console.log('okk password');
+
+        if (passwordenter.search(/[a-z]/) == -1) {
+            message.innerText = 'You are missing the lowercase letters';
+        } else if (passwordenter.search(/[A-Z]/) == -1) {
+            message.innerText = 'You are missing the uppercase letters';
+        } else if (passwordenter.search(/[0-9]/) == -1) {
+            message.innerText = 'You are missing the numbers';
+        } else if (passwordenter.search(/[!@#$%^&*]/) == -1) {
+            message.innerText = 'You are missing special characters';
+        } else {
+            message.innerText = 'Password is strong';
+        }
+    }
+});
+
+    </script>
+</body>
+</html>
